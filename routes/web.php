@@ -15,6 +15,6 @@ Route::get('/about', function () {
 
 Route::view('/beranda','pages.beranda');
 Route::view('/contact','pages.contact');
-Route::get('/product',[productController::class,'getProduct']);
+Route::get('/product',[productController::class,'index']);
 Route::get('/product/tambah',[productController::class,'tambahProduct']);
 
