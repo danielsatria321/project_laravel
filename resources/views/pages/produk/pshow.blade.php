@@ -39,6 +39,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Nama Produk</th>
                             <th scope="col">Harga</th>
+                            <th scope="col">Deskripsi</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -48,14 +49,13 @@
                                 <th scope="row">{{$loop->iteration }}</th>
                                 <td>{{ $item->nama_produk}}</td>
                                 <td>{{ $item->harga}}</td>
-                                <td>{{ $item->dekripsi}}</td>
-                                <td><!-- Button trigger modal -->
+                                <td>{{ $item->deskripsi}}</td>
+                                <td>
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#hapus{{$item->id_produk }}">
                                         Hapus
                                     </button>
 
-                                    <!-- Modal -->
 
                                     <a href="/product/{{$item->id_produk }}/updateData" class="btn btn-warning">Update</a>
                                     <a href="/product/{{$item->id_produk }}" class="btn btn-success">Lihat Detail</button>
