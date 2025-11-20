@@ -12,9 +12,15 @@ class kategoriController extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::get();
-        return view('pages.kategori.show',compact(('kategori')));
-        
+        $search = request()->caribos;
+        $kategori = Kategori::when($search,function($query,$search){
+            return $query->where('nama_kategori','like',"%{$search}%");
+        })->get();
+
+        if($search){
+            session()->now('success',"Data $search ditemukan");
+        }
+        return view('pages.kategori.show',compact('kategori'));
     }
 
     /**
@@ -34,6 +40,7 @@ class kategoriController extends Controller
             'nama_kategori'=>$request->nama_kategori,
             'deskripsi'=>$request->deskripsi,
         ]);
+        return redirect('/kategori')->with('success','data nerhasil ditambahkan');
     }
 
     /**
@@ -49,7 +56,9 @@ class kategoriController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $kategori = Kategori::findOrFail($id);
+        return view('pages.kategori.edit', compact('kategori'));
+
     }
 
     /**
@@ -57,7 +66,11 @@ class kategoriController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Kategori::where('id_kategori',$id)->update([
+            'nama_kategori'=>$request->nama_kategori,
+            'deskripsi'=>$request->deskripsi,
+        ]);
+        return redirect('/kategori')->with('success','Data berhasil di update');
     }
 
     /**
@@ -66,5 +79,6 @@ class kategoriController extends Controller
     public function destroy(string $id)
     {
         Kategori::findOrFail($id)->delete();
+        return redirect('/kategori')->with('success','Data Berhasil di Hapus!');
     }
 }

@@ -30,7 +30,7 @@
             <form class="input-group mb-3">
                 <input type="text" class="form-control" name="keyword" placeholder="Masukkan nama" aria-label="Cari Data"
                     aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>
             </form>
             <div class="card-body">
                 <table class="table">
@@ -57,8 +57,8 @@
                                     </button>
 
 
-                                    <a href="/product/{{$item->id_produk }}/updateData" class="btn btn-warning">Update</a>
-                                    <a href="/product/{{$item->id_produk }}" class="btn btn-success">Lihat Detail</button>
+                                    <a href="/product/{{$item->id_produk}}/updateData" class="btn btn-warning">Update</a>
+                                    <a href="/product/{{$item->id_produk}}" class="btn btn-success">Lihat Detail</a>
                                 </td>
                                 </td>
                         @empty

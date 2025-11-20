@@ -2,11 +2,11 @@
 
 Aplikasi web CRUD sederhana menggunakan Laravel 12 untuk manajemen produk dan kategori.
 
-## 📋 Tentang Proyek
+## Tentang Proyek
 
 Proyek ini adalah aplikasi pembelajaran Laravel yang mencakup operasi CRUD (Create, Read, Update, Delete) untuk manajemen produk dan kategori. Aplikasi ini dibangun untuk memahami konsep dasar Laravel seperti routing, controllers, models, migrations, dan Eloquent ORM.
 
-## ✨ Fitur
+## Fitur
 
 -   **Manajemen Produk**
     -   Tambah produk baru
@@ -24,15 +24,14 @@ Proyek ini adalah aplikasi pembelajaran Laravel yang mencakup operasi CRUD (Crea
     -   Halaman about
     -   Halaman contact
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 -   **Framework**: Laravel 12
 -   **PHP**: ^8.2
 -   **Database**: MySQL/SQLite
 -   **Frontend**: Blade Templates, Vite
 -   **Testing**: PHPUnit
-
-## 📦 Struktur Database
+    Struktur Database
 
 ### Tabel: `tb_produk`
 
@@ -50,7 +49,7 @@ Proyek ini adalah aplikasi pembelajaran Laravel yang mencakup operasi CRUD (Crea
 -   `deskripsi` (text 100)
 -   `timestamps`
 
-## 🚀 Instalasi
+## Instalasi
 
 ### Prasyarat
 
@@ -145,70 +144,3 @@ DELETE /product/{id}            - Hapus produk
 
 Resource /kategori              - CRUD kategori (7 routes)
 ```
-
-## 📂 Struktur Direktori Utama
-
-```
-├── app/
-│   ├── Http/Controllers/
-│   │   ├── productController.php
-│   │   └── kategoriController.php
-│   └── Models/
-│       ├── produk.php
-│       └── Kategori.php
-├── database/
-│   ├── migrations/
-│   ├── seeders/
-│   └── factories/
-├── resources/
-│   └── views/
-│       └── pages/
-├── routes/
-│   └── web.php
-└── public/
-```
-
-## 🧪 Testing
-
-Jalankan test dengan perintah:
-
-```bash
-php artisan test
-```
-
-## 📖 Developer Mode
-
-Untuk menjalankan dalam mode development:
-
-```bash
-composer run dev
-```
-
-Perintah ini akan menjalankan secara bersamaan:
-
--   PHP Artisan serve
--   Queue listener
--   Pail (log viewer)
--   Vite dev server
-
-## 🤝 Kontribusi
-
-Kontribusi selalu diterima! Silakan buat pull request atau buka issue untuk diskusi.
-
-## 📄 Lisensi
-
-Proyek ini menggunakan lisensi [MIT License](https://opensource.org/licenses/MIT).
-
-## 👨‍💻 Author
-
-**Daniel Satria**
-
--   GitHub: [@danielsatria321](https://github.com/danielsatria321)
-
-## 📞 Kontak
-
-Jika ada pertanyaan atau masalah, silakan buat issue di repository ini.
-
----
-
-⭐ Jangan lupa berikan star jika proyek ini membantu Anda!
