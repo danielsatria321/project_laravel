@@ -26,6 +26,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/kategori">
+                        <i class="bi bi-telephone me-1"></i> Kategori
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/contact">
                         <i class="bi bi-telephone me-1"></i> Contact
                     </a>

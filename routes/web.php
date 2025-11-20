@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\productController;
+use App\Http\Controllers\kategoriController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,6 +22,7 @@ Route::get('/product/create',[productController::class,'create']);//halaman form
 Route::post('/product',[productController::class,'store']);//menyimpan data dari form
 Route::get('/product/{id}', [productController::class,'showDetail']);
 Route::get('product/{id}/updateData',[productController::class,'updateData']);
+Route::resource('kategori', kategoriController::class);
 
 
 
