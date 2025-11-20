@@ -50,9 +50,9 @@
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"> Deskripsi</label>
-            <textarea class="form-control" name="deskripsi" placeholder="Deskripsi Produk" id="floatingTextarea2"
-                style="height: 100px">{{ old('deskripsi') }}</textarea>
-            @error('deskripsi')
+            <textarea class="form-control" name="deskripsi_produk" placeholder="Deskripsi Produk" id="floatingTextarea2"
+                style="height: 100px">{{ old('deskripsi_produk') }}</textarea>
+            @error('deskripsi_produk')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>

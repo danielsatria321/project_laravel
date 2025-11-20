@@ -12,12 +12,7 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('beranda') || request()->is('/') ? 'active' : '' }}"
                         href="/beranda">
-                        <i class="bi bi-house me-1"></i> Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('product') ? 'active' : '' }}" href="/product">
-                        <i class="bi bi-box-seam me-1"></i> Produk Kami
+                        <i class="bi bi-house me-1"></i> Beranda
                     </a>
                 </li>
                 <li class="nav-item">
@@ -26,27 +21,26 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/kategori">
-                        <i class="bi bi-telephone me-1"></i> Kategori
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="/contact">
                         <i class="bi bi-telephone me-1"></i> Contact
                     </a>
                 </li>
-            </ul>
-
-
-            <div class="navbar-nav">
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="bi bi-person-circle me-1"></i> Account
+                <li class="nav-item">
+                    <span class="nav-link disabled text-white-50">
+                        | <i class="bi bi-gear me-1"></i> Menu Admin
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('product*') ? 'active' : '' }}" href="/product">
+                        <i class="bi bi-box-seam me-1"></i> Produk Kami
                     </a>
-
-                </div>
-            </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('kategori*') ? 'active' : '' }}" href="/kategori">
+                        <i class="bi bi-grid me-1"></i> Kategori
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

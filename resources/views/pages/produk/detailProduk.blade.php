@@ -14,7 +14,8 @@
                 <div class="row">
                     <div class="col-md-5 mb-4 mb-md-0">
                         <div class="bg-light rounded p-3 text-center">
-                            <img src="https://placehold.co/600x400" alt="Gambar Produk" class="img-fluid rounded">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop"
+                                alt="Gambar Produk" class="img-fluid rounded">
                         </div>
                     </div>
                     <div class="col-md-7">

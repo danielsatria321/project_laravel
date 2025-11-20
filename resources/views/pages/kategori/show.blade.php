@@ -1,23 +1,6 @@
 @extends('pages.layouts.master')
 @section('konten')
-    <!-- Hero Section -->
-    <section class="hero-section bg-primary text-white py-5 mb-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-3">Daftar Kategori</h1>
-                    <p class="lead mb-4">Toko online terpercaya dengan berbagai produk berkualitas dan harga terjangkau.
-                        Temukan kebutuhan Anda di sini!</p>
-                    <a href="#produk" class="btn btn-light btn-lg me-3">Belanja Sekarang</a>
-                    <a href="#tentang" class="btn btn-outline-light btn-lg">Tentang Kami</a>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://placehold.co/600x400/ffffff/007bff?text=PROFILTOKOKU" alt="Hero Image"
-                        class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
+
     @if(session('success'))
         <div class="alert alert-success" role="alert">
             {{ session('success') }}

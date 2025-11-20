@@ -26,8 +26,11 @@
         }
 
         .navbar {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, #0d6efd, #0a58ca);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1050;
         }
 
         .navbar-brand {
@@ -35,9 +38,25 @@
             font-size: 1.5rem;
         }
 
+        .navbar-dark .dropdown-menu {
+            background-color: white;
+            z-index: 1051;
+            position: absolute;
+        }
+
+        .navbar-dark .dropdown-item {
+            color: #212529;
+        }
+
+        .navbar-dark .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+
         .main-content {
             flex: 1;
             padding: 2rem 0;
+            position: relative;
+            z-index: 1;
         }
 
         .content-card {
@@ -45,6 +64,8 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             background-color: white;
+            position: relative;
+            z-index: 1;
         }
 
         .footer {
@@ -81,7 +102,7 @@
             background: var(--primary-color);
         }
 
-        /* Loading animation */
+
         .loading {
             display: inline-block;
             width: 20px;
@@ -123,9 +144,7 @@
 </head>
 
 <body>
-
-    @include('pages.layouts.navbar');
-
+    @include('pages.layouts.navbar')
     <main class="main-content">
         <div class="container">
             <div class="content-card">
@@ -149,8 +168,14 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    =
     <script>
+        // Initialize all dropdowns
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                return new bootstrap.Dropdown(dropdownToggleEl)
+            })
+        });
 
         const backToTopButton = document.getElementById('backToTop');
 

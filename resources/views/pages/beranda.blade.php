@@ -1,4 +1,27 @@
 @extends('pages.layouts.master')
+
+@section('styles')
+    <style>
+        .main-content {
+            padding: 0 !important;
+        }
+
+        .content-card {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .content-card .card-body {
+            padding: 0 !important;
+        }
+
+        section {
+            position: relative;
+            z-index: 1 !important;
+        }
+    </style>
+@endsection
+
 @section('konten')
     <!-- Hero Section -->
     <section class="hero-section bg-primary text-white py-5 mb-5">
@@ -12,8 +35,8 @@
                     <a href="#tentang" class="btn btn-outline-light btn-lg">Tentang Kami</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="https://placehold.co/600x400/ffffff/007bff?text=PROFILTOKOKU" alt="Hero Image"
-                        class="img-fluid rounded shadow">
+                    <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop"
+                        alt="Hero Image" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -170,8 +193,7 @@
                             <p class="card-text">"Barang sesuai deskripsi, pengiriman cepat, dan packing rapi. Sangat puas
                                 berbelanja di Profiltokoku!"</p>
                             <div class="d-flex align-items-center mt-4">
-                                <img src="https://placehold.co/60x60?text=Avatar" alt="Pelanggan"
-                                    class="rounded-circle me-3">
+                                <img src="https://i.pravatar.cc/60?img=12" alt="Pelanggan" class="rounded-circle me-3">
                                 <div>
                                     <h6 class="mb-0">Budi Santoso</h6>
                                     <small class="text-muted">Jakarta</small>
@@ -193,8 +215,7 @@
                             <p class="card-text">"Harga kompetitif dan kualitas produk terjamin. Sudah beberapa kali belanja
                                 di sini dan selalu puas."</p>
                             <div class="d-flex align-items-center mt-4">
-                                <img src="https://placehold.co/60x60?text=Avatar" alt="Pelanggan"
-                                    class="rounded-circle me-3">
+                                <img src="https://i.pravatar.cc/60?img=5" alt="Pelanggan" class="rounded-circle me-3">
                                 <div>
                                     <h6 class="mb-0">Sari Indah</h6>
                                     <small class="text-muted">Bandung</small>
@@ -216,8 +237,7 @@
                             <p class="card-text">"Pelayanan customer service sangat ramah dan responsif. Pengiriman tepat
                                 waktu sesuai janji. Recommended!"</p>
                             <div class="d-flex align-items-center mt-4">
-                                <img src="https://placehold.co/60x60?text=Avatar" alt="Pelanggan"
-                                    class="rounded-circle me-3">
+                                <img src="https://i.pravatar.cc/60?img=8" alt="Pelanggan" class="rounded-circle me-3">
                                 <div>
                                     <h6 class="mb-0">Ahmad Rizki</h6>
                                     <small class="text-muted">Surabaya</small>
