@@ -39,7 +39,9 @@
                             <th scope="col">#</th>
                             <th scope="col">Nama Produk</th>
                             <th scope="col">Harga</th>
+                            <th scope="col">Kategori</th>
                             <th scope="col">Deskripsi</th>
+                            <th scope="col">Stok</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -49,7 +51,9 @@
                                 <th scope="row">{{$loop->iteration }}</th>
                                 <td>{{ $item->nama_produk}}</td>
                                 <td>{{ $item->harga}}</td>
-                                <td>{{ $item->deskripsi}}</td>
+                                <td>{{ $item->nama_kategori}}</td>
+                                <td>{{ $item->deskripsi_produk}}</td>
+                                <td>{{ $item->stok}}</td>
                                 <td>
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#hapus{{$item->id_produk }}">

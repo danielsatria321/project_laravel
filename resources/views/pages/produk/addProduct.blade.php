@@ -24,10 +24,34 @@
 
             </div>
         </div>
+        <div class="col-md-6 mb-3">
+            <label for="exampleInputEmail1" class="form-label"> Stok</label>
+            <input type="number" class="form-control" name="stok" value="{{ old('stok') }}" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            @error('stok')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="kategori_id" class="form-label"> Kategori</label>
+            <select class="form-select" name="kategori_id" aria-label="Default select example">
+                <option selected disabled>Pilih Kategori</option>
+                @foreach ($data_kategori as $item)
+                    <option value="{{ $item->id_kategori }}" {{ old('kategori_id') == $item->id_kategori ? 'selected' : '' }}>
+                        {{ $item->nama_kategori }}
+                    </option>
+                @endforeach
+            </select>
+            @error('kategori_id')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"> Deskripsi</label>
-            <textarea class="form-control" name="deskripsi" placeholder="Deskripsi Produk" id="floatingTextarea2" value={{ old('deskripsi') }} style="height: 100px"></textarea>
+            <textarea class="form-control" name="deskripsi" placeholder="Deskripsi Produk" id="floatingTextarea2"
+                style="height: 100px">{{ old('deskripsi') }}</textarea>
             @error('deskripsi')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
