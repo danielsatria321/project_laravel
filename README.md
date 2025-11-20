@@ -1,4 +1,4 @@
-# Belajar Laravel
+# Project Laravel
 
 Aplikasi CRUD manajemen produk dan kategori menggunakan Laravel 12.
 
